@@ -14,6 +14,7 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
+  late Animation animation;
 
   @override
   void initState() {
@@ -22,14 +23,22 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     animationController = AnimationController(
       duration: const Duration(milliseconds: 700),
       vsync: this,
-      upperBound: 100.0,
     );
+
+    animation =
+        CurvedAnimation(parent: animationController, curve: Curves.decelerate);
 
     animationController.forward();
 
     animationController.addListener(() {
       setState(() {});
     });
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
   }
 
   @override
@@ -49,7 +58,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     tag: 'logo',
                     child: Container(
                       padding: const EdgeInsets.only(right: 2.0),
-                      height: animationController.value,
+                      height: animation.value * 100,
                       child: Image.asset('images/logo.png'),
                     ),
                   ),
@@ -59,7 +68,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   Text(
                     '~ Chattie ~',
                     style: TextStyle(
-                      fontSize: animationController.value / 2,
+                      fontSize: animation.value * 40,
                       fontWeight: FontWeight.w900,
                     ),
                   ),
