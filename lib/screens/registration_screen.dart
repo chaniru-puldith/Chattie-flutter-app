@@ -93,7 +93,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   height: 42.0,
                   child: const Text(
                     'Register',
-                    style: TextStyle(color: Colors.white, fontSize: 20.0),
+                    style: TextStyle(fontSize: 20.0),
                   ),
                 ),
               ),

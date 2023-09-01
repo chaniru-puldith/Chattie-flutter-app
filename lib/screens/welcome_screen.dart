@@ -11,7 +11,27 @@ class WelcomeScreen extends StatefulWidget {
   State<WelcomeScreen> createState() => _WelcomeScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _WelcomeScreenState extends State<WelcomeScreen>
+    with SingleTickerProviderStateMixin {
+  late AnimationController animationController;
+
+  @override
+  void initState() {
+    super.initState();
+
+    animationController = AnimationController(
+      duration: const Duration(milliseconds: 700),
+      vsync: this,
+      upperBound: 100.0,
+    );
+
+    animationController.forward();
+
+    animationController.addListener(() {
+      setState(() {});
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,17 +49,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     tag: 'logo',
                     child: Container(
                       padding: const EdgeInsets.only(right: 2.0),
-                      height: 100.0,
+                      height: animationController.value,
                       child: Image.asset('images/logo.png'),
                     ),
                   ),
                   const SizedBox(
                     height: 30.0,
                   ),
-                  const Text(
+                  Text(
                     '~ Chattie ~',
                     style: TextStyle(
-                      fontSize: 40.0,
+                      fontSize: animationController.value / 2,
                       fontWeight: FontWeight.w900,
                     ),
                   ),
