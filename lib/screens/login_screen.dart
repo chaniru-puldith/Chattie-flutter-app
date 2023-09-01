@@ -11,7 +11,6 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -91,6 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 42.0,
                   child: Text(
                     'Log In',
+                    style: TextStyle(fontSize: 20.0),
                   ),
                 ),
               ),

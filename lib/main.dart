@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:chattie/screens/welcome_screen.dart';
+import 'package:chattie/screens/login_screen.dart';
+import 'package:chattie/screens/registration_screen.dart';
+import 'package:chattie/screens/chat_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,7 +38,13 @@ class MyApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: WelcomeScreen(),
+      initialRoute: 'welcome_screen',
+      routes: {
+        'welcome_screen': (context) => WelcomeScreen(),
+        'login_screen': (context) => const LoginScreen(),
+        'registration_screen': (context) => const RegistrationScreen(),
+        'chat_screen': (context) => const ChatScreen(),
+      },
     );
   }
 }
