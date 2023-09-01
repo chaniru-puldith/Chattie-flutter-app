@@ -25,18 +25,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Container(
-                    padding: const EdgeInsets.only(right: 2.0),
-                    height: 150.0,
-                    child: Image.asset('images/logo.png'),
+                  Hero(
+                    tag: 'logo',
+                    child: Container(
+                      padding: const EdgeInsets.only(right: 2.0),
+                      height: 100.0,
+                      child: Image.asset('images/logo.png'),
+                    ),
                   ),
                   const SizedBox(
                     height: 30.0,
                   ),
                   const Text(
-                    'Welcome to Chattie !',
+                    '~ Chattie ~',
                     style: TextStyle(
-                      fontSize: 32.0,
+                      fontSize: 40.0,
                       fontWeight: FontWeight.w900,
                     ),
                   ),
@@ -49,7 +52,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: Material(
                   elevation: 5.0,
-                  color: Colors.lightBlueAccent,
+                  color: Colors.blueAccent,
                   borderRadius: BorderRadius.circular(30.0),
                   child: MaterialButton(
                     onPressed: () {

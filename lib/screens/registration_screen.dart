@@ -19,9 +19,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              height: 200.0,
-              child: Image.asset('images/logo.png'),
+            Hero(
+              tag: 'logo',
+              child: SizedBox(
+                height: 220.0,
+                child: Image.asset('images/logo.png'),
+              ),
             ),
             const SizedBox(
               height: 48.0,
@@ -42,13 +45,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.blueAccent, width: 2.0),
+                  borderSide:
+                      BorderSide(color: Colors.lightBlueAccent, width: 2.0),
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
                 ),
               ),
             ),
             const SizedBox(
-              height: 8.0,
+              height: 10.0,
             ),
             TextField(
               onChanged: (value) {
@@ -66,7 +70,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.blueAccent, width: 2.0),
+                  borderSide:
+                      BorderSide(color: Colors.lightBlueAccent, width: 2.0),
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
                 ),
               ),
@@ -77,7 +82,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
-                color: Colors.blueAccent,
+                color: Colors.brown[400],
                 borderRadius: const BorderRadius.all(Radius.circular(30.0)),
                 elevation: 5.0,
                 child: MaterialButton(
