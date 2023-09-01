@@ -38,9 +38,9 @@ class MyApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      initialRoute: WelcomeScreen.id,
+      initialRoute: ChatScreen.id,
       routes: {
-        WelcomeScreen.id: (context) => WelcomeScreen(),
+        WelcomeScreen.id: (context) => const WelcomeScreen(),
         LoginScreen.id: (context) => const LoginScreen(),
         RegistrationScreen.id: (context) => const RegistrationScreen(),
         ChatScreen.id: (context) => const ChatScreen(),

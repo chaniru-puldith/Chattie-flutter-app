@@ -15,6 +15,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         leading: null,
         actions: <Widget>[
           IconButton(
@@ -23,7 +24,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 //Implement logout functionality
               }),
         ],
-        title: Text('⚡️Chat'),
+        title: const Text('💬 Chat'),
         backgroundColor: Colors.lightBlueAccent,
       ),
       body: SafeArea(
