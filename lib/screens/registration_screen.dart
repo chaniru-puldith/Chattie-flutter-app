@@ -1,5 +1,6 @@
 import 'package:chattie/Components/rounded_button.dart';
 import 'package:chattie/utilities/constants.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class RegistrationScreen extends StatefulWidget {
@@ -12,6 +13,9 @@ class RegistrationScreen extends StatefulWidget {
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
+  late String _email;
+  late String _password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,8 +36,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 48.0,
             ),
             TextField(
+              keyboardType: TextInputType.emailAddress,
+              textAlign: TextAlign.center,
               onChanged: (value) {
-                //Do something with the user input.
+                _email = value;
               },
               decoration: kTextFieldDecoration.copyWith(
                 hintText: 'Enter your email',
@@ -43,8 +49,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 10.0,
             ),
             TextField(
+              obscureText: true,
+              textAlign: TextAlign.center,
               onChanged: (value) {
-                //Do something with the user input.
+                _password = value;
               },
               decoration: kTextFieldDecoration.copyWith(
                 hintText: 'Enter your password',
@@ -55,7 +63,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
             RoundedButton(
               color: Colors.brown.shade400,
-              onPressed: () {},
+              onPressed: () {
+                if (kDebugMode) {
+                  print(_email);
+                  print(_password);
+                }
+              },
               text: 'Register',
             ),
           ],
