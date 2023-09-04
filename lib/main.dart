@@ -33,16 +33,18 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light().copyWith(
         primaryColor: Colors.blue.shade800,
         scaffoldBackgroundColor: const Color(0xFFF5F5F5),
-        textTheme: const TextTheme(
-          bodyMedium: TextStyle(color: Colors.black54),
-        ),
+        textTheme: Theme.of(context).textTheme.apply(
+              bodyColor: Colors.black54,
+              displayColor: Colors.black54,
+            ),
       ),
       darkTheme: ThemeData.dark().copyWith(
         primaryColor: Colors.blue.shade800,
         scaffoldBackgroundColor: const Color(0xFF142432),
-        textTheme: const TextTheme(
-          bodyMedium: TextStyle(color: Colors.white54),
-        ),
+        textTheme: Theme.of(context).textTheme.apply(
+              bodyColor: Colors.white54,
+              displayColor: Colors.white54,
+            ),
       ),
       themeMode: ThemeMode.system,
       initialRoute: WelcomeScreen.id,
