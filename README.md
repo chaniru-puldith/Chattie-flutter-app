@@ -10,7 +10,9 @@ Chattie is a Flutter mobile group chat application developed using Firebase Fire
 
 
 # Screenshots
-<img src="https://github.com/chaniru-puldith/EzyQuizzy-flutter-app/assets/131237062/92dfae87-2281-4afe-bfa6-97219d6cfc39" width="400px">&nbsp;&nbsp;<br><br>
+<p align="center">
+  <img src="https://github.com/chaniru-puldith/EzyQuizzy-flutter-app/assets/131237062/92dfae87-2281-4afe-bfa6-97219d6cfc39" width="400px">
+</p>
 <img src="https://github.com/chaniru-puldith/EzyQuizzy-flutter-app/assets/131237062/173f17be-9b31-4209-b405-270426b4fb20" width="400px">
 <img src="https://github.com/chaniru-puldith/EzyQuizzy-flutter-app/assets/131237062/c66f001e-bfde-49ea-971f-eed43b69fbaf" width="400px" align="right">&nbsp;&nbsp;<br><br>
 <img src="https://github.com/chaniru-puldith/EzyQuizzy-flutter-app/assets/131237062/139d5316-3c5f-44f6-9166-486a18ebbfdc" width="400px">
